@@ -10,6 +10,7 @@ import Firebase
 import AVFoundation
 import FirebaseAuth
 
+// Modele powinny być w osobnych plikach
 struct AuthCredentials {
     let email: String
     let password: String
@@ -23,6 +24,8 @@ enum VoidResult {
     case failure
 }
 
+
+// Takie statyczne serwisy są w ogóle nietestowalne. Dlatego powinno się użyć instancji i DependencyContainer
 struct AuthService {
     static func signOut(completion: @escaping ((VoidResult) -> Void)) {
         do {

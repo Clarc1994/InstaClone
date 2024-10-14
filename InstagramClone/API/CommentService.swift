@@ -7,6 +7,7 @@
 
 import Firebase
 
+// Skoro wszędzie używasz Firebase, to powinieneś sobie zrobić fasade na to, klase która będzie nakładką na Firebase i użycie tej fasady w serwisach.
 struct CommentService {
     static func uploadComment(comment: String, post: Post, user: User, completion: @escaping(FirestoreCompletion)) {
         let data: [String: Any] = ["uid": user.uid,

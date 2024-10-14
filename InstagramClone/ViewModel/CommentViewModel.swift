@@ -38,7 +38,8 @@ final class CommentViewModel {
     func getComment(index: Int) -> Comment {
         return comments[index]
     }
-    
+
+    // Przez te wszystkie statyczny serwisy ten kod jest nietestowalny w ogóle
     func fetchComments() {
         CommentService.fetchComment(forPost: post.postId) { comments in
             self.comments = comments
